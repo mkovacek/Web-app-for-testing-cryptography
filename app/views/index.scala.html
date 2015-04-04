@@ -1,0 +1,100 @@
+
+@main("Digitalni potpis OS2") {
+    <button class="expand">Digitalni potpis OS2 Matija Kovaček</button>
+    <div class="row">
+        <div class="large-12 columns">
+            <fieldset>
+                <legend>Asimetrični RSA ključevi</legend>
+                <div class="large-12 columns">
+                    <label>Privatni ključ</label>
+                    <textarea rows="12" name="privatniKljuc" id="privatniKljuc"></textarea>
+                </div>
+                <div class="large-12 columns">
+                    <label>Javni ključ</label>
+                    <textarea rows="7" name="javniKljuc" id="javniKljuc"></textarea>
+                </div>
+                <div class="large-3 large-offset-9 columns">
+                    <button class="button expand" id="generirajKljuceve">Generiraj ključeve</button>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Simetrični AES ključ</legend>
+                <div class="large-12 columns">
+                    <label>Tajni ključ</label>
+                    <input type="text" id="tajniKljuc" name="tajniKljuc">
+                </div>
+                <div class="large-3 large-offset-9 columns">
+                    <button class="button expand" id="generirajTajniKljuc">Generiraj tajni ključ</button>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Kriptiranje i dekriptiranje poruke</legend>
+                <div class="large-12 columns" id="poruka">
+                    <label id="lblporuka">Poruka</label>
+                    <textarea rows="7" name="porukaPosiljatelja" id="porukaPosiljatelja"></textarea>
+                </div>
+                <div class="large-3 large-offset-9 columns">
+                    <button class="button expand" id="spremiPoruku">Spremi</button>
+                </div>
+                <div class="large-6 columns">
+                    <label>Kriptirana poruka simetričnom funkcijom</label>
+                    <textarea rows="7" name="kriptiranaPorukaAES" id="kriptiranaPorukaAES"></textarea>
+                </div>
+                <div class="large-6 columns">
+                    <label>Dekriptirana poruka simetričnom funkcijom</label>
+                    <textarea rows="7" name="dekriptiranaPorukaAES" id="dekriptiranaPorukaAES"></textarea>
+                </div>
+                <div class="large-3 large-offset-3 columns">
+                    <button class="button expand" id="kriptirajPorukuAES">Kriptiraj poruku</button>
+                </div>
+                <div class="large-3 large-offset-3 columns">
+                    <button class="button expand" id="dekriptirajPorukuAES">Dekriptiraj poruku</button>
+                </div>
+                <div class="large-6 columns">
+                    <label>Kriptirana poruka asimetričnom funkcijom</label>
+                    <textarea rows="7" name="kriptiranaPorukaRSA" id="kriptiranaPorukaRSA"></textarea>
+                </div>
+                <div class="large-6 columns">
+                    <label>Dekriptirana poruka asimetričnom funkcijom</label>
+                    <textarea rows="7" name="dekriptiranaPorukaRSA" id="dekriptiranaPorukaRSA"></textarea>
+                </div>
+                <div class="large-3 large-offset-3 columns">
+                    <button class="button expand" id="kriptirajPorukuRSA">Kriptiraj poruku</button>
+                </div>
+                <div class="large-3 large-offset-3 columns">
+                    <button class="button expand" id="dekriptirajPorukuRSA">Dekriptiraj poruku</button>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Sažetak</legend>
+                <div class="large-12 columns">
+                    <label>Sažetak poruke pomoću md5</label>
+                    <input type="text" id="sazetak" name="sazetak">
+                </div>
+                <div class="large-3 large-offset-9 columns">
+                    <button class="button expand" id="generirajSazetak">Izradi sažetak</button>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Digitalni potpis i provjera digitalnog potpisa</legend>
+                <div class="large-12 columns">
+                    <label>Digitalni potpis</label>
+                    <textarea rows="5" id="digitalniPotpis" name="digitalniPotpis"></textarea>
+                </div>
+                <div class="large-3 large-offset-9 columns">
+                    <button class="button expand" id="digitalnoPotpisi">Digitalni potpis</button>
+                </div>
+                <div class="large-12 columns">
+                    <label id="lbl">Provjera digitalnog potpisa</label>
+                    <div style="display: none" data-alert class='alert-box alert'>HA-HA<a href='#' class='close'>&times;</a></div>
+                </div>
+                <div class="large-3 large-offset-9 columns">
+                    <button class="button expand" id="provjeraDigitalnogPotpisa">Provjeri digitalni potpis</button>
+                </div>
+            </fieldset>
+
+        </div>
+
+    </div>
+
+}
