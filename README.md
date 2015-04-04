@@ -1,2 +1,3 @@
 # Web-app-for-testing-cryptography
-School project: Symmetric and asymmetric cryptography, digital signature (AES,RSA,md5)
+<b>School project:</b> Symmetric and asymmetric cryptography, digital signature (AES,RSA,md5)<br>
+<b>Used technologies:</b> PlayFramework (Java), javaScript (jquery), Zurb Foundation 
